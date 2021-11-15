@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
-function App() {
+// import { Buutton } from './components/Buutton';
+// import { BuuttonGroup } from './components/BuuttonGroup';
+// import { Checkboxx } from './components/Checkboxx';
+// import { FloatingactionButton } from './components/FloatingactionButton';
+// import { Radiobutton } from './components/Radiobutton';
+// import { Raating } from './components/Raating';
+// import { Seleccted } from './components/Seleccted';
+import { Swwitch } from './components/Swwitch';
+// import { Iconos } from './components/Iconos';
+
+
+
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <Buutton /> */}
+      {/* <BuuttonGroup /> */}
+      {/* <Checkboxx /> */}
+      {/* <FloatingactionButton/> */}
+      {/* <Radiobutton/> */}
+      {/* <Raating/> */}
+      {/* <Seleccted /> */}
+      <Swwitch />
+      {/* <Iconos /> */}
     </div>
-  );
+  )
 }
 
-export default App;
