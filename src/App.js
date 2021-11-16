@@ -1,7 +1,9 @@
-import { Person } from '@mui/icons-material';
-import { makeStyles } from '@mui/styles';
-import { Button } from '@mui/material';
 import React from 'react';
+
+import { ImageCard } from './components2/ImageCard';
+import { ThemeProvider } from '@mui/material';
+import { theme } from './assets/theme';
+import { Box } from '@mui/system';
 
 // import { Buutton } from './components/Buutton';
 // import { BuuttonGroup } from './components/BuuttonGroup';
@@ -17,28 +19,15 @@ import React from 'react';
 // import CustomPaginationActionsTable from './components/Tabbles';
 // import { AppBarr } from './components/AppBar';
 
-const useStyles = makeStyles((theme)=>({
-  button:{
-    backgroundColor:"#3333",
-    color:"white",
-  },
-}));
-
 export const App = () => {
-
-  const classes = useStyles();
-
   return (
-    <div>
-      <Button
-      variant="contained"
-      size="small"
-      startIcon={ <Person /> }
-      className={classes.button}
-      >
-        Material UI
-      </Button>
-    </div>
+    <ThemeProvider theme={theme} >
+      <div>
+        <Box sx={{flexGrow: 1 }}>
+          <ImageCard />
+        </Box>
+      </div>
+    </ThemeProvider>
   )
 }
 
