@@ -1,3 +1,6 @@
+import { Person } from '@mui/icons-material';
+import { makeStyles } from '@mui/styles';
+import { Button } from '@mui/material';
 import React from 'react';
 
 // import { Buutton } from './components/Buutton';
@@ -12,26 +15,29 @@ import React from 'react';
 // import { ListDriver } from './components/ListDriver';
 // import { Iconos } from './components/Iconos';
 // import CustomPaginationActionsTable from './components/Tabbles';
-import { AppBarr } from './components/AppBar';
+// import { AppBarr } from './components/AppBar';
 
-
+const useStyles = makeStyles((theme)=>({
+  button:{
+    backgroundColor:"#3333",
+    color:"white",
+  },
+}));
 
 export const App = () => {
+
+  const classes = useStyles();
+
   return (
     <div>
-      {/* <Buutton /> */}
-      {/* <BuuttonGroup /> */}
-      {/* <Checkboxx /> */}
-      {/* <FloatingactionButton/> */}
-      {/* <Radiobutton/> */}
-      {/* <Raating/> */}
-      {/* <Seleccted /> */}
-      {/* <Swwitch /> */}
-      {/* <Avvatar /> */}
-      {/* <ListDriver /> */}
-      {/* <Iconos /> */}
-      {/* <CustomPaginationActionsTable/> */}
-      <AppBarr/>
+      <Button
+      variant="contained"
+      size="small"
+      startIcon={ <Person /> }
+      className={classes.button}
+      >
+        Material UI
+      </Button>
     </div>
   )
 }
